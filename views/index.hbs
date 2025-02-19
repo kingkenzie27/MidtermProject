@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Planner</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/create">Create Event</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Upcoming Events</h2>
+        <ul>
+            {{#each events}}
+                <li>
+                    <a href="/events/{{this.id}}">{{this.name}}</a> - {{this.date}}
+                </li>
+            {{/each}}
+        </ul>
+    </main>
+</body>
+</html>
