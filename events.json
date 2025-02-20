@@ -1,0 +1,33 @@
+[
+  {
+    "id": 2,
+    "name": "Olivia's Bridal Shower",
+    "date": "2025-05-10",
+    "description": "Bridal Shower, please bring a gift",
+    "rsvp": [],
+    "rsvps": [
+      "Mary",
+      "Aunt Ann",
+      "Lucy"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Marc and Joe's wedding",
+    "date": "2025-08-09",
+    "description": "Ceremony starts at 2:00pm Reception starts at 5:00pm",
+    "rsvp": [],
+    "rsvps": [
+      "Rosa and Owen",
+      "Mason",
+      "Evelyn and Lynn"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Work Dinner",
+    "date": "2025-03-07",
+    "description": "At apple bees\r\n",
+    "rsvps": []
+  }
+]

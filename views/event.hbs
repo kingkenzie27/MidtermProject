@@ -22,10 +22,37 @@
                 <li>{{this}}</li>
             {{/each}}
         </ul>
-        <form action="/events/{{event.id}}/rsvp" method="POST">
+        <form action="/event/{{event.id}}/rsvp" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <button type="submit">RSVP</button>
         </form>
+        <button id="deleteEventBtn">Delete Event</button>
+        <script>
+          document.getElementById('deleteEventBtn').addEventListener('click', function() {
+            const eventId = eventId;
+            fetch(`/events/${eventId}`, {
+              method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data);
+              window.location.href = '/';
+            })
+            .catch(error => console.error('Error:', error));
+          });
+        </script>
+        <button id="updateEventBtn" data-id="{{event.id}}">Update Event</button>
+        <script>
+          const updateBtn = document.getElementById('updateEventBtn');
+          const eventId = updateBtn.getAttribute('data-id');
+        
+          updateBtn.addEventListener('click', function() {
+            // Redirect the user to the edit page for this event
+            window.location.href = `/event/${eventId}/edit`;
+          });
+        </script>
+
+
     </main>
 </body>
 </html>
